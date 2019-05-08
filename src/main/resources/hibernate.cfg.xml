@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--  Local Environment --> 
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.url">jdbc:derby:onTheHouseDB;create=true</property>
+        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+       
+        <!-- Test Environment -->
+        <!-- 
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.url">jdbc:mysql://apps-test.cs.uwec.edu:3306/labView?serverTimezone=UTC</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="hibernate.connection.username">labView</property>
+        <property name="hibernate.connection.password">TODO</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        -->
+        
+        <!-- Production Environment -->
+        <!-- 
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.url">jdbc:mysql://apps.cs.uwec.edu:3306/labView?serverTimezone=UTC</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="hibernate.connection.username">labView</property>
+        <property name="hibernate.connection.password">TODO</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        -->
+        
+        <!-- Model mappings -->
+        <!-- Example: <mapping class="edu.uwec.electionTracker.model.CLASSNAME" />  -->
+         <mapping class="backend.models.Business"/>
+         <mapping class="backend.models.Raffle"/>
+         <mapping class="backend.models.User"/>
+         <mapping class="backend.models.Prize"/>
+         
+    </session-factory>
+</hibernate-configuration>
