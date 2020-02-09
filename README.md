@@ -1,4 +1,5 @@
 # On-The-House-Service
+Written using Java Spring Framework
 
 On-The-House is an app that lets bars create raffles that people in their bar can join. 
 These raffles are customizable with current parameters: 
@@ -9,7 +10,8 @@ These raffles are customizable with current parameters:
 
 The app is location based so you must be in the bar to join the raffle. Once inside, you can join the raffle and see your odds of winning the big prize.
 
-On-The-House-Service is mostly built with some minor tweaks when building the app. 
-On-The-House-App is currently under construction.
+On-The-House-Service: Complete.
+
+On-The-House-App: Currently under construction.
 
 
